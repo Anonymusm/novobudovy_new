@@ -145,10 +145,8 @@ header {
 
 .backdrop {
   position: fixed;
-  left: 50%;
-  top: 50%;
-  z-index: 10;
-  transform: translate(-50%, -50%);
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
@@ -156,13 +154,9 @@ header {
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.backdrop.is--hidden {
+.backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
-}
-
-.no--scroll {
-  overflow: hidden;
 }
 
 .modal {
@@ -175,26 +169,8 @@ header {
   padding: 45px 25px;
   background-color: #fff;
 }
-@media screen and (min-width: 480px) {
-  .modal {
-    width: 320px;
-    padding: 50px 25px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .modal {
-    padding: 60px;
-    width: 530px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .modal {
-    padding: 60px;
-    width: 530px;
-  }
-}
 
-.modal--close {
+.modal-close {
   background-color: transparent;
   border: 1px solid rgba(0, 0, 0, 0.1);
   position: absolute;
@@ -205,21 +181,21 @@ header {
   border-radius: 100%;
 }
 @media screen and (min-width: 480px) {
-  .modal--close {
+  .modal-close {
     position: absolute;
     top: 12px;
     right: 12px;
   }
 }
 @media screen and (min-width: 768px) {
-  .modal--close {
+  .modal-close {
     position: absolute;
     top: 20px;
     right: 20px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .modal--close {
+  .modal-close {
     position: absolute;
     top: 20px;
     right: 20px;
